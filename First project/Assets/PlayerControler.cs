@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     public int speed;
+    public float rotSpeed;
     public float hInput;
     public float vInput;
     
@@ -20,7 +21,8 @@ public class PlayerControler : MonoBehaviour
       hInput = Input.GetAxis("Horizontal"); // left and right movment
       vInput = Input.GetAxis("Vertical"); // forward and backward movment
       
-      transform.Translate(Vector3.right * speed * hInput * Time.deltaTime); // move character left and right
+    
+      transform.Rotate(Vector3.up, rotSpeed * hInput * Time.deltaTime); // move character left and right rotation
       
       transform.Translate(Vector3.forward * speed * vInput * Time.deltaTime); // move character forward and back
     }
