@@ -9,6 +9,8 @@ public class Pickups : MonoBehaviour
     public int value;
     
     public GameManager gm;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
