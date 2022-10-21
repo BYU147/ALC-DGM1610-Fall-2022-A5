@@ -6,7 +6,7 @@ public class MoveAndShoot : MonoBehaviour
 {
     public float speed;
     public float stopDistance;
-    public float retreatDistanc;
+    public float retreatDistance;
     private Transform target;
     private float shotDelay;
     public float startDelay;
@@ -16,7 +16,7 @@ public class MoveAndShoot : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        ShotDelay = startDelay;
+        shotDelay = startDelay;
     }
 
     // Update is called once per frame
@@ -27,13 +27,13 @@ public class MoveAndShoot : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
-        else if(Vector2.Distance(transform.position, target.position) < stopDistance && Vector2.Distance(trnsform. position, target.position) > retreatDistance)
+        else if(Vector2.Distance(transform.position, target.position) < stopDistance && Vector2.Distance(transform. position, target.position) > retreatDistance)
         {
-            trnsform.position = this.transform.position;
+            transform.position = this.transform.position;
         }
         else if(Vector2.Distance(transform.position, target.position)> retreatDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position))
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
 }
