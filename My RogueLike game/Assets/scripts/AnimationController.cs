@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPPro
+using TMPro;
 
 public class AnimationController : MonoBehaviour
 {
