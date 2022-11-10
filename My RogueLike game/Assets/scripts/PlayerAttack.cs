@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int damage;
     
+    
 
     // Update is called once per frame
     void Update()
@@ -23,11 +24,22 @@ public class PlayerAttack : MonoBehaviour
                 
                 for(int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                 }
             }
             
             attackDelay = startDelay;
         }
+        else
+        {
+            attackDelay -= Time.deltaTime;
+        }
     }
+    
+    void OnDrawGizmoSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.pos.position, attackRange);
+    }
+   
 }
