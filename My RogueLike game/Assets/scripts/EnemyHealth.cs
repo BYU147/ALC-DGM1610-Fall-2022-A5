@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
@@ -28,18 +28,8 @@ public class Health : MonoBehaviour
         
         if(currentHealth <= 0)
         {
+            Debug.Log("Enemy is dead!");
             Destroy(gameObject,deathDelay);
-        }
-    }
-    
-    
-    public void AddHealth(int healAmount)
-    {
-        currentHealth += healAmount;
-        
-        if(currentHealth >= maxHealth)
-        {
-            currentHealth = maxHealth;
         }
     }
 }
