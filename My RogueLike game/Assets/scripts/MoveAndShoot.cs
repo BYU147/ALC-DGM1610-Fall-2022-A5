@@ -30,21 +30,31 @@ public class MoveAndShoot : MonoBehaviour
         else if(Vector2.Distance(transform.position, target.position) < stopDistance && Vector2.Distance(transform. position, target.position) > retreatDistance)
         {
             transform.position = this.transform.position;
-            Attack();
+            
+            
         }
         else if(Vector2.Distance(transform.position, target.position)> retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
+        
+        if(shootDelay <= 0)
+        {
+            Debug.Log("AAAA");
+            Attack();
+            shootDelay = startDelay;
+        }
+        else
+        {
+            startDelay -= Time.deltaTime;
+        }
+       
     }
     
     void Attack()
     {
-        if(distance >= retreatDistance)
-        {
-            transform.position = this.transform.position;
-            Instantiate(projectile,transform.position, Quaternion.identity);
-            shootDelay = shootDelay;
-        }
+        transform.position = this.transform.position;
+        Instantiate(projectile,transform.position, Quaternion.identity);
+        shootDelay = shootDelay;
     }
 }

@@ -3656,7 +3656,8 @@ GameObject:
   - component: {fileID: 335743630}
   - component: {fileID: 335743629}
   - component: {fileID: 335743631}
-  m_Layer: 0
+  - component: {fileID: 335743632}
+  m_Layer: 3
   m_Name: goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3790,11 +3791,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  stopDistance: 1
-  retreatDistance: 0
+  stopDistance: 3
+  retreatDistance: 1
   startDelay: 1
-  distance: 0
+  distance: 1
   projectile: {fileID: 4937206066157421419, guid: 2d8154070172d4cf68b5e06795822a3c, type: 3}
+--- !u!114 &335743632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335743626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de50a609874754160b3f93fd92752aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  deathDelay: 0
 --- !u!1 &342174582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5144,6 +5160,7 @@ GameObject:
   - component: {fileID: 453881097}
   - component: {fileID: 453881096}
   - component: {fileID: 453881098}
+  - component: {fileID: 453881099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5295,6 +5312,25 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   deathDelay: 0
+--- !u!114 &453881099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453881092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5103d02de2be54bb3a9437a4a97f836e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 0
+  attackPos: {fileID: 453881094}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 8
+  attackRange: 7
+  damage: 1
 --- !u!1 &462594984
 GameObject:
   m_ObjectHideFlags: 0
@@ -9203,7 +9239,7 @@ GameObject:
   - component: {fileID: 802782151}
   - component: {fileID: 802782153}
   - component: {fileID: 802782152}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11363,6 +11399,7 @@ GameObject:
   - component: {fileID: 1026212590}
   - component: {fileID: 1026212589}
   - component: {fileID: 1026212588}
+  - component: {fileID: 1026212593}
   m_Layer: 0
   m_Name: goblin (1)
   m_TagString: Untagged
@@ -11502,6 +11539,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0.001, y: -179.818, z: -0.293}
+--- !u!114 &1026212593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026212587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de50a609874754160b3f93fd92752aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  deathDelay: 0
 --- !u!1001 &1044917910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14460,7 +14512,7 @@ GameObject:
   - component: {fileID: 1370161747}
   - component: {fileID: 1370161746}
   - component: {fileID: 1370161745}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18445,7 +18497,7 @@ GameObject:
   - component: {fileID: 1882575571}
   - component: {fileID: 1882575570}
   - component: {fileID: 1882575569}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19769,7 +19821,7 @@ GameObject:
   - component: {fileID: 2010591278}
   - component: {fileID: 2010591277}
   - component: {fileID: 2010591276}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20806,7 +20858,7 @@ GameObject:
   - component: {fileID: 2129069093}
   - component: {fileID: 2129069095}
   - component: {fileID: 2129069094}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
