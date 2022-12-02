@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 274175697}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,8 +1704,8 @@ MonoBehaviour:
   healthAmount: 0
   ammoAmount: 0
   rotationSpeed: 50
-  bobSpeed: -5
-  bobHeight: -5
+  bobSpeed: 0.5
+  bobHeight: 1
   pickupSfx: {fileID: 0}
 --- !u!54 &1161140241
 Rigidbody:
@@ -1731,7 +1731,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161140236}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.10101901, y: 0.40153942, z: 0.65098554}
@@ -1909,7 +1909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4703707677970600, guid: e42189c530de6c944961b54c51a398e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.06
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 4703707677970600, guid: e42189c530de6c944961b54c51a398e6, type: 3}
       propertyPath: m_LocalPosition.z
