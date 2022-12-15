@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Homebase : MonoBehaviour
 {
+    private GameManager gm;
+    private Renderer flagRend;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        flagRend = GameObject.Find("FlagHome").GetComponent<Renderer>();
+        
+        flagRend.enabled = false;
         
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    void OnTriggerEnter(Collider other)
     {
-        
+        if(other.CompareTag("Player") && gm.hasFlag)
+        {
+            Debug.Log("Player has reached HomeBase!");
+            gm.PlaceFlag();
+            flagRend.enabled = true;
+        }
     }
 }
