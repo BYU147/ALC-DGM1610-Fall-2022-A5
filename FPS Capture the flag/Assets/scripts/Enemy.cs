@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         InvokeRepeating("UpdatePath", 0.0f, 0.5f);
     }
     
-    void UpdatPath()
+    void UpdatePath()
     {
         NavMeshPath navMeshPath = new NavMeshPath();
         NavMesh.CalculatePath(transform.position, target.transform.position, NavMesh.AllAreas, navMeshPath);
